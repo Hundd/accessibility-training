@@ -26,7 +26,7 @@
     </a>
     <header class="hero hero-bg is-fullheight">
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item logo-link" href="#">
@@ -36,15 +36,11 @@
                 />
                 <span class="visually-hidden">EPAM home page</span>
               </a>
-              <span
-                class="navbar-burger burger"
-                data-target="navbarMenu"
-                role="presentation"
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
+              <a role="button" class="navbar-burger burger" data-target="navbarMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
 
             <div id="navbarMenu" class="navbar-menu">

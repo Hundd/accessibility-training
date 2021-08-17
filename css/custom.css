@@ -125,3 +125,7 @@ fieldset.field {
 .hero.is-info .tabs.is-boxed .is-active .outlined-link {
   color: rgb(20 101 153);
 }
+
+.navbar-burger {
+  color: white;
+}
