@@ -32,7 +32,7 @@
               <a class="navbar-item logo-link" href="#">
                 <img
                   src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg"
-                  alt="EPAM home page"
+                  alt=""
                 />
                 <span class="visually-hidden">EPAM home page</span>
               </a>
@@ -48,40 +48,40 @@
             </div>
 
             <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
+              <ul class="navbar-end">
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i class="fa fa-home"></i>
                     </span>
                     <span>Home</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i class="fab fa-superpowers"></i>
                     </span>
                     <span>Examples</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i class="fa fa-book"></i>
                     </span>
                     <span>Documentation</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>View Source</span>
                   </a>
-                </span>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
@@ -93,9 +93,9 @@
             <h2 class="title has-text-white">
               We have web accessibility in mind
             </h2>
-            <h3 class="subtitle has-text-white">
+            <p class="subtitle has-text-white">
               Would you like to get the latest news?
-            </h3>
+            </p>
 
             <fieldset class="box field is-grouped">
               <label class="control is-expanded">
@@ -118,7 +118,7 @@
     <main id="main" role="main">
       <section class="section" id="about">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">About Us</h2>
+          <h1 class="title is-2">About Us</h1>
           <p class="subtitle is-5">We of all trades, master of "some"</p>
           <div class="container">
             <p>
@@ -134,7 +134,7 @@
         </div>
 
         <div class="content container">
-          <h1 class="is-1 title">Hello World</h1>
+          <h2 class="is-1 title">Hello World</h2>
           <p>
             Lorem ipsum<sup>
               <a href="#" target="_blank" class="outlined-link external-link"
@@ -168,7 +168,7 @@
             </li>
             <li>Ut non enim metus.</li>
           </ul>
-          <div class="is-3 title">Third level</div>
+          <h3 class="is-3 title">Third level</h3>
           <p>
             Quisque ante lacus, malesuada ac auctor vitae, congue
             <a href="#" target="_blank" class="outlined-link external-link">
@@ -189,10 +189,10 @@
             </li>
             <li>Vivamus maximus ultricies pulvinar.</li>
           </ol>
-          <div class="blockquote">
+          <blockquote class="blockquote">
             Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero
             hendrerit ipsum, ut blandit est tellus sit amet turpis.
-          </div>
+          </blockquote>
           <p>
             Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et
             <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque
@@ -218,7 +218,7 @@
             tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla
             facilisi. Nullam ac erat ante.
           </p>
-          <div class="is-4 title">Fourth level</div>
+          <h4 class="is-4 title">Fourth level</h4>
           <p>
             Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla
             ac. Mauris euismod metus a tellus laoreet, at elementum ex
@@ -287,7 +287,7 @@
             pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel
             condimentum. Nam pharetra varius metus non pellentesque.
           </p>
-          <div class="is-5 title">Fifth level</div>
+          <h5 class="is-5 title">Fifth level</h5>
           <p>
             Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed
             tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula
@@ -310,7 +310,7 @@
             />
             <figcaption>Figure 1: Some beautiful placeholders</figcaption>
           </figure>
-          <div class="is-6 title">Sixth level</div>
+          <h6 class="is-6 title">Sixth level</h6>
           <p>
             Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar
             lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non
@@ -404,28 +404,30 @@
             </div>
           </div>
         </div>
-        <div
-          class="tabs is-boxed is-centered main-menu"
-          id="nav"
-          role="tablist"
-        >
-          <ul>
-            <li role="tab" data-target="pane-1" id="1" class="is-active">
-              <a href="#" class="outlined-link">
+        <div class="tabs is-boxed is-centered main-menu" id="nav">
+          <ul role="tablist">
+            <li
+              role="tab"
+              data-target="pane-1"
+              id="1"
+              class="is-active"
+              tabindex="0"
+            >
+              <a class="outlined-link">
                 <span class="icon is-small"><i class="fa fa-image"></i></span>
                 <span>Pictures</span>
               </a>
             </li>
-            <li role="tab" data-target="pane-3" id="3">
-              <a href="#" class="outlined-link">
+            <li role="tab" data-target="pane-3" id="3" tabindex="0">
+              <a class="outlined-link">
                 <span class="icon is-small"
                   ><i class="fab fa-superpowers"></i
                 ></span>
                 <span>Team</span>
               </a>
             </li>
-            <li role="tab" data-target="pane-4" id="4">
-              <a href="#" class="outlined-link">
+            <li role="tab" data-target="pane-4" id="4" tabindex="0">
+              <a class="outlined-link">
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
               </a>
@@ -642,7 +644,7 @@
                     alt="web access summit"
                   />
                 </div>
-                <p class="title">New York</p>
+                <h3 class="title">New York</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -652,7 +654,7 @@
                 <div class="image">
                   <img src="./img/access.jpg" alt="person in a wheelchair" />
                 </div>
-                <p class="title">Los Angeles</p>
+                <h3 class="title">Los Angeles</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -662,7 +664,7 @@
                 <div class="image">
                   <img src="./img/dotcss-2019.jpg" alt="conference hall" />
                 </div>
-                <p class="title">Mexico</p>
+                <h3 class="title">Mexico</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -675,7 +677,7 @@
                 <div class="image">
                   <img src="./img/images.jpg" alt="access something" />
                 </div>
-                <p class="title">Paris</p>
+                <h3 class="title">Paris</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -688,7 +690,7 @@
                     alt="css minsk logo"
                   />
                 </div>
-                <p class="title">Minsk</p>
+                <h3 class="title">Minsk</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -698,7 +700,7 @@
                 <div class="image">
                   <img src="./img/access.jpg" alt="" />
                 </div>
-                <p class="title">London</p>
+                <h3 class="title">London</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -717,18 +719,22 @@
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Front End Web Development</div>
-                  Develop Front End using latest standards with HTML5/CSS3 with
-                  added funtionality using JavaScript and Vue.js.
+                  <h3 class="title is-5">Front End Web Development</h3>
+                  <p>
+                    Develop Front End using latest standards with HTML5/CSS3
+                    with added funtionality using JavaScript and Vue.js.
+                  </p>
                 </div>
               </a>
             </div>
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Back End Web Development</div>
-                  Develop Back End application/service using Node.js or ASP .NET
-                  and SQL server or Mongo DB databases.
+                  <h3 class="title is-5">Back End Web Development</h3>
+                  <p>
+                    Develop Back End application/service using Node.js or ASP
+                    .NET and SQL server or Mongo DB databases.
+                  </p>
                 </div>
               </a>
             </div>
@@ -738,18 +744,22 @@
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Front End Web Development</div>
-                  Develop Front End using latest standards with HTML5/CSS3 with
-                  added funtionality using JavaScript and Vue.js.
+                  <h3 class="title is-5">Front End Web Development</h3>
+                  <p>
+                    Develop Front End using latest standards with HTML5/CSS3
+                    with added funtionality using JavaScript and Vue.js.
+                  </p>
                 </div>
               </a>
             </div>
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Back End Web Development</div>
-                  Develop Back End application/service using Node.js or ASP .NET
-                  and SQL server or Mongo DB databases.
+                  <h3 class="title is-5">Back End Web Development</h3>
+                  <p>
+                    Develop Back End application/service using Node.js or ASP
+                    .NET and SQL server or Mongo DB databases.
+                  </p>
                 </div>
               </a>
             </div>
@@ -767,8 +777,8 @@
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Admin <small>(Light)</small></span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -777,23 +787,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-danger">WIP</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-1.jpeg" alt="js conf logo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a class="card-footer-item" href="#">Preview</a>
                     <a class="card-footer-item" href="#">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Cards</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -802,23 +812,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">?</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-2.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Forum</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -827,25 +837,25 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-3.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>InstaAlbum</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -854,23 +864,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-4.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Landing</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -879,23 +889,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-5.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Marketing</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -904,17 +914,17 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-6.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
@@ -946,7 +956,7 @@
                       Dashboard
                     </button>
                   </li>
-                  <li>
+                  <li role="menuitem">
                     <button class="tag is-link is-medium outlined-button">
                       Customers
                     </button>
