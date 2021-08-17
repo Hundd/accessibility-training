@@ -37,7 +37,8 @@
 .select select:active,
 .select select:focus,
 .textarea:active,
-.textarea:focus {
+.textarea:focus,
+.outlined-button:focus {
   outline: 2px solid blue;
   outline-offset: 3px;
 }

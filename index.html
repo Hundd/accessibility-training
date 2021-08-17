@@ -22,14 +22,11 @@
       class="button is-white is-outlined visually-hidden accessibility-cta"
       href="#main"
     >
-      <span class="icon">
-        <i class="fa fa-home"></i>
-      </span>
       <span>Skip to main content</span>
     </a>
-    <header class="hero hero-bg is-fullheight">
+    <header class="hero hero-bg is-fullheight" role="banner">
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item logo-link" href="#">
@@ -37,8 +34,13 @@
                   src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg"
                   alt="EPAM home page"
                 />
+                <span class="visually-hidden">EPAM home page</span>
               </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
+              <span
+                class="navbar-burger burger"
+                data-target="navbarMenu"
+                role="presentation"
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -97,10 +99,11 @@
 
             <fieldset class="box field is-grouped">
               <label class="control is-expanded">
-                <span class="visually-hidden">
-                  Email address to receive notifications
-                </span>
-                <input class="input" type="text" />
+                <input
+                  class="input"
+                  type="text"
+                  aria-label="Email address to receive notifications"
+                />
               </label>
 
               <button class="control button is-info" type="submit">
@@ -112,7 +115,7 @@
       </div>
     </header>
 
-    <main id="main">
+    <main id="main" role="main">
       <section class="section" id="about">
         <div class="section-heading has-text-centered">
           <h2 class="title is-2">About Us</h2>
@@ -401,15 +404,19 @@
             </div>
           </div>
         </div>
-        <div class="tabs is-boxed is-centered main-menu" id="nav">
+        <div
+          class="tabs is-boxed is-centered main-menu"
+          id="nav"
+          role="tablist"
+        >
           <ul>
-            <li data-target="pane-1" id="1" class="is-active">
+            <li role="tab" data-target="pane-1" id="1" class="is-active">
               <a href="#" class="outlined-link">
                 <span class="icon is-small"><i class="fa fa-image"></i></span>
                 <span>Pictures</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3">
+            <li role="tab" data-target="pane-3" id="3">
               <a href="#" class="outlined-link">
                 <span class="icon is-small"
                   ><i class="fab fa-superpowers"></i
@@ -417,7 +424,7 @@
                 <span>Team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4">
+            <li role="tab" data-target="pane-4" id="4">
               <a href="#" class="outlined-link">
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
@@ -428,7 +435,7 @@
       </section>
 
       <section class="tab-content container">
-        <div class="tab-pane is-active level" id="pane-1">
+        <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
           <div class="container">
             <div class="columns features">
               <div class="column is-4">
@@ -527,7 +534,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div class="tab-pane" id="pane-3" role="tabpanel">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -600,7 +607,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div class="tab-pane" id="pane-4" role="tabpanel">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <div class="title has-text-centered">Inspired video</div>
@@ -925,7 +932,7 @@
           </div>
 
           <div class="columns">
-            <aside class="column is-3">
+            <aside class="column is-3" role="complementary">
               <button
                 class="button is-primary is-block is-alt is-large"
                 type="button"
@@ -933,22 +940,44 @@
                 New Post
               </button>
               <div class="menu">
-                <ul class="menu-list forum-list">
-                  <li>
-                    <span class="tag is-primary is-medium">Dashboard</span>
+                <ul class="menu-list forum-list" role="menu">
+                  <li role="menuitem">
+                    <button class="tag is-primary is-medium outlined-button">
+                      Dashboard
+                    </button>
                   </li>
-                  <li><span class="tag is-link is-medium">Customers</span></li>
                   <li>
-                    <span class="tag is-light is-danger is-medium"
-                      >Authentication</span
+                    <button class="tag is-link is-medium outlined-button">
+                      Customers
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button
+                      class="tag is-light is-danger is-medium outlined-button"
                     >
+                      Authentication
+                    </button>
                   </li>
-                  <li><span class="tag is-dark is-medium">Payments</span></li>
-                  <li>
-                    <span class="tag is-success is-medium">Transfers</span>
+                  <li role="menuitem">
+                    <button class="tag is-dark is-medium outlined-button">
+                      Payments
+                    </button>
                   </li>
-                  <li><span class="tag is-warning is-medium">Balance</span></li>
-                  <li><span class="tag is-medium">Question</span></li>
+                  <li role="menuitem">
+                    <button class="tag is-success is-medium outlined-button">
+                      Transfers
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button class="tag is-warning is-medium outlined-button">
+                      Balance
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button class="tag is-medium outlined-button">
+                      Question
+                    </button>
+                  </li>
                 </ul>
               </div>
             </aside>
@@ -1140,7 +1169,7 @@
             <div class="subtitle is-5">Don't hesitate, ask anything</div>
           </div>
 
-          <form class="column is-half is-offset-one-quarter box">
+          <form class="column is-half is-offset-one-quarter box" role="form">
             <div class="field">
               <label for="name" class="label">Name</label>
               <div class="control">
@@ -1213,7 +1242,10 @@
             <div class="field">
               <div class="control">
                 <label class="checkbox">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    aria-label="I agree to the terms and condition"
+                  />
                   I agree to the
                   <a href="#" class="outlined-link">terms and conditions</a>
                 </label>
@@ -1224,11 +1256,11 @@
               <legend class="visually-hidden">Subscribe to newsletter?</legend>
               <div class="control">
                 <label class="radio">
-                  <input type="radio" name="question" />
+                  <input type="radio" name="question" aria-label="Yes" />
                   Yes
                 </label>
                 <label class="radio">
-                  <input type="radio" name="question" />
+                  <input type="radio" name="question" aria-label="No" />
                   No
                 </label>
               </div>
@@ -1359,7 +1391,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="columns">
           <div class="column is-3 is-offset-2">
