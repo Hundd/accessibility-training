@@ -465,6 +465,7 @@
                         class="button is-link modal-button"
                         data-target="modal-image1"
                         type="button"
+                        aria-controls="modal-image1"
                       >
                         Image modal
                       </button>
@@ -493,6 +494,7 @@
                         class="button is-link modal-button"
                         data-target="modal-card"
                         type="button"
+                        aria-controls="modal-card"
                       >
                         Modal Card
                       </button>
@@ -525,6 +527,7 @@
                         class="button is-link modal-button"
                         data-target="modal-image2"
                         type="button"
+                        aria-controls="modal-image2"
                       >
                         Image modal
                       </button>
@@ -1493,7 +1496,12 @@
       </div>
     </footer>
 
-    <div id="modal-card" class="modal modal-fx-3dSlit">
+    <div
+      role="dialog"
+      id="modal-card"
+      class="modal modal-fx-3dSlit"
+      aria-labelledby="modal-card-label"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
         <div class="card">
@@ -1515,7 +1523,7 @@
                   />
                 </div>
               </div>
-              <div class="media-content">
+              <div id="modal-card-label" class="media-content" tabindex="0">
                 <div class="title is-4">Jane Doe</div>
                 <div class="subtitle is-6">@jane_doe</div>
               </div>
@@ -1547,7 +1555,13 @@
       <button class="modal-close is-large" type="button"></button>
     </div>
 
-    <div id="modal-image1" class="modal modal-fx-3dSlit">
+    <div
+      role="dialog"
+      id="modal-image1"
+      class="modal modal-fx-3dSlit"
+      aria-labelledby="modal-image-label"
+      tabindex="0"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
         <img
@@ -1557,8 +1571,15 @@
       </div>
       <button class="modal-close is-large" type="button"></button>
     </div>
+    <p id="modal-image-label" class="visually-hidden">Preview image modal</p>
 
-    <div id="modal-image2" class="modal modal-fx-superScaled">
+    <div
+      role="dialog"
+      id="modal-image2"
+      class="modal modal-fx-superScaled"
+      aria-labelledby="modal-image-label"
+      tabindex="0"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-image">
         <img
@@ -1566,7 +1587,11 @@
           alt="random image"
         />
       </div>
-      <button class="modal-close is-large" type="button"></button>
+      <button
+        aria-hidden="true"
+        class="modal-close is-large"
+        type="button"
+      ></button>
     </div>
 
     <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
