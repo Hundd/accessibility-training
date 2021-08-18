@@ -42,6 +42,7 @@
                 data-target="navbarMenu"
                 aria-label="menu"
                 aria-expanded="false"
+                aria-controls="navbarMenu"
               >
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -414,6 +415,7 @@
               id="1"
               class="is-active"
               tabindex="0"
+              aria-controls="pane-1"
             >
               <a class="outlined-link">
                 <span class="icon is-small"
@@ -422,7 +424,13 @@
                 <span>Pictures</span>
               </a>
             </li>
-            <li role="tab" data-target="pane-3" id="3" tabindex="0">
+            <li
+              role="tab"
+              data-target="pane-3"
+              id="3"
+              tabindex="0"
+              aria-controls="pane-3"
+            >
               <a class="outlined-link">
                 <span class="icon is-small"
                   ><i aria-hidden="true" class="fab fa-superpowers"></i
@@ -430,7 +438,13 @@
                 <span>Team</span>
               </a>
             </li>
-            <li role="tab" data-target="pane-4" id="4" tabindex="0">
+            <li
+              role="tab"
+              data-target="pane-4"
+              id="4"
+              tabindex="0"
+              aria-controls="pane-4"
+            >
               <a class="outlined-link">
                 <span class="icon is-small"
                   ><i aria-hidden="true" class="fa fa-film"></i
