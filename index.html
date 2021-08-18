@@ -1216,6 +1216,7 @@
               <label for="name" class="label">Name</label>
               <div class="control">
                 <input
+                  aria-required="true"
                   class="input"
                   type="text"
                   placeholder="Text input"
@@ -1227,7 +1228,12 @@
             <div class="field">
               <label for="user-name" class="label">Username</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" type="text" id="user-name" />
+                <input
+                  aria-required="true"
+                  class="input is-success"
+                  type="text"
+                  id="user-name"
+                />
                 <span class="icon is-small is-left">
                   <i aria-hidden="true" class="fas fa-user"></i>
                 </span>
@@ -1247,6 +1253,9 @@
                   type="email"
                   placeholder="Email input"
                   value="hello@"
+                  aria-invalid="true"
+                  aria-required="true"
+                  aria-describedby="email-description"
                 />
                 <span class="icon is-small is-left">
                   <i aria-hidden="true" class="fas fa-envelope"></i>
@@ -1255,7 +1264,9 @@
                   <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p class="help is-danger">This email is invalid</p>
+              <p id="email-description" class="help is-danger">
+                This email is invalid
+              </p>
             </div>
 
             <div class="field">
@@ -1277,6 +1288,7 @@
                   id="message"
                   class="textarea"
                   placeholder="Textarea"
+                  aria-required="true"
                 ></textarea>
               </div>
             </div>
@@ -1296,7 +1308,7 @@
 
             <fieldset class="field">
               <legend class="visually-hidden">Subscribe to newsletter?</legend>
-              <div class="control">
+              <div class="control" role="radiogroup">
                 <label class="radio">
                   <input type="radio" name="question" aria-label="Yes" />
                   Yes
