@@ -170,3 +170,10 @@
   height: 40px;
   background-size: contain;
 }
+
+.snackbar {
+  position: fixed;
+  bottom: 10px;
+  width: 600px;
+  right: 10px;
+}

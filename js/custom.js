@@ -1,3 +1,5 @@
+const SNACKBAR_INTERVAL = 60 * 1000;
+
 (function () {
   var burger = document.querySelector(".burger");
   var menu = document.querySelector("#" + burger.dataset.target);
@@ -5,6 +7,8 @@
     burger.classList.toggle("is-active");
     menu.classList.toggle("is-active");
   });
+
+  initSnackbar();
 })();
 
 document.querySelectorAll("#nav li").forEach(function (navEl) {
@@ -42,4 +46,35 @@ function toggleTab(selectedNav, targetId) {
       tab.style.display = "none";
     }
   });
+}
+
+function initSnackbar() {
+  const snackBar = document.getElementById("snackbar");
+  const closeButton = snackBar.querySelector(".delete");
+  const title = snackBar.querySelector(".snackbar-title");
+  const text = snackBar.querySelector(".message-body");
+
+  const interval = setInterval(() => {
+    getRandomComment().then(({ name, body }) => {
+      title.textContent = name;
+      text.textContent = body;
+      snackBar.hidden = false;
+      snackBar.ariaHidden = false;
+      snackBar.ariaLive = "assertive";
+    });
+  }, SNACKBAR_INTERVAL);
+
+  closeButton.addEventListener("click", () => {
+    clearInterval(interval);
+    snackBar.hidden = true;
+    snackBar.ariaHidden = true;
+    snackBar.ariaLive = "off";
+  });
+}
+
+function getRandomComment() {
+  const id = Math.floor(100 * Math.random() + 1);
+  return fetch(`https://jsonplaceholder.typicode.com/comments/${id}`).then(
+    (res) => res.json()
+  );
 }
