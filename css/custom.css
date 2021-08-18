@@ -37,7 +37,8 @@
 .select select:active,
 .select select:focus,
 .textarea:active,
-.textarea:focus {
+.textarea:focus,
+.outlined-button:focus {
   outline: 2px solid blue;
   outline-offset: 3px;
 }
@@ -123,4 +124,8 @@ fieldset.field {
 
 .hero.is-info .tabs.is-boxed .is-active .outlined-link {
   color: rgb(20 101 153);
+}
+
+.navbar-burger {
+  color: white;
 }

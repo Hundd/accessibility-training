@@ -22,64 +22,69 @@
       class="button is-white is-outlined visually-hidden accessibility-cta"
       href="#main"
     >
-      <span class="icon">
-        <i class="fa fa-home"></i>
-      </span>
       <span>Skip to main content</span>
     </a>
     <header class="hero hero-bg is-fullheight">
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item logo-link" href="#">
                 <img
                   src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg"
-                  alt="EPAM home page"
+                  alt=""
                 />
+                <span class="visually-hidden">EPAM home page</span>
               </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
+              <a
+                role="button"
+                class="navbar-burger burger"
+                data-target="navbarMenu"
+                aria-label="menu"
+                aria-expanded="false"
+                aria-controls="navbarMenu"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
 
             <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
+              <ul class="navbar-end">
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
-                      <i class="fa fa-home"></i>
+                      <i aria-hidden="true" class="fa fa-home"></i>
                     </span>
                     <span>Home</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
-                      <i class="fab fa-superpowers"></i>
+                      <i aria-hidden="true" class="fab fa-superpowers"></i>
                     </span>
                     <span>Examples</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
-                      <i class="fa fa-book"></i>
+                      <i aria-hidden="true" class="fa fa-book"></i>
                     </span>
                     <span>Documentation</span>
                   </a>
-                </span>
-                <span class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i aria-hidden="true" class="fab fa-github"></i>
                     </span>
                     <span>View Source</span>
                   </a>
-                </span>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
@@ -91,16 +96,17 @@
             <h2 class="title has-text-white">
               We have web accessibility in mind
             </h2>
-            <h3 class="subtitle has-text-white">
+            <p class="subtitle has-text-white">
               Would you like to get the latest news?
-            </h3>
+            </p>
 
             <fieldset class="box field is-grouped">
               <label class="control is-expanded">
-                <span class="visually-hidden">
-                  Email address to receive notifications
-                </span>
-                <input class="input" type="text" />
+                <input
+                  class="input"
+                  type="text"
+                  aria-label="Email address to receive notifications"
+                />
               </label>
 
               <button class="control button is-info" type="submit">
@@ -112,10 +118,10 @@
       </div>
     </header>
 
-    <main id="main">
+    <main id="main" role="main">
       <section class="section" id="about">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">About Us</h2>
+          <h1 class="title is-2">About Us</h1>
           <p class="subtitle is-5">We of all trades, master of "some"</p>
           <div class="container">
             <p>
@@ -131,7 +137,7 @@
         </div>
 
         <div class="content container">
-          <h1 class="is-1 title">Hello World</h1>
+          <h2 class="is-1 title">Hello World</h2>
           <p>
             Lorem ipsum<sup>
               <a href="#" target="_blank" class="outlined-link external-link"
@@ -165,7 +171,7 @@
             </li>
             <li>Ut non enim metus.</li>
           </ul>
-          <div class="is-3 title">Third level</div>
+          <h3 class="is-3 title">Third level</h3>
           <p>
             Quisque ante lacus, malesuada ac auctor vitae, congue
             <a href="#" target="_blank" class="outlined-link external-link">
@@ -186,10 +192,10 @@
             </li>
             <li>Vivamus maximus ultricies pulvinar.</li>
           </ol>
-          <div class="blockquote">
+          <blockquote class="blockquote">
             Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero
             hendrerit ipsum, ut blandit est tellus sit amet turpis.
-          </div>
+          </blockquote>
           <p>
             Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et
             <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque
@@ -215,13 +221,13 @@
             tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla
             facilisi. Nullam ac erat ante.
           </p>
-          <div class="is-4 title">Fourth level</div>
+          <h4 class="is-4 title">Fourth level</h4>
           <p>
             Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla
             ac. Mauris euismod metus a tellus laoreet, at elementum ex
             efficitur.
           </p>
-          <pre>
+          <pre tabindex="0">
           &lt;!DOCTYPE html&gt;
           &lt;html&gt;
               &lt;head&gt;
@@ -284,7 +290,7 @@
             pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel
             condimentum. Nam pharetra varius metus non pellentesque.
           </p>
-          <div class="is-5 title">Fifth level</div>
+          <h5 class="is-5 title">Fifth level</h5>
           <p>
             Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed
             tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula
@@ -307,7 +313,7 @@
             />
             <figcaption>Figure 1: Some beautiful placeholders</figcaption>
           </figure>
-          <div class="is-6 title">Sixth level</div>
+          <h6 class="is-6 title">Sixth level</h6>
           <p>
             Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar
             lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non
@@ -331,7 +337,7 @@
             <div class="column is-4">
               <div class="card is-shady">
                 <div class="card-image has-text-centered">
-                  <i class="fa fa-paw"></i>
+                  <i aria-hidden="true" class="fa fa-paw"></i>
                 </div>
                 <div class="card-content">
                   <div class="content">
@@ -351,7 +357,7 @@
             <div class="column is-4">
               <div class="card is-shady">
                 <div class="card-image has-text-centered">
-                  <i class="fab fa-empire"></i>
+                  <i aria-hidden="true" class="fab fa-empire"></i>
                 </div>
                 <div class="card-content">
                   <div class="content">
@@ -372,7 +378,7 @@
             <div class="column is-4">
               <div class="card is-shady">
                 <div class="card-image has-text-centered">
-                  <i class="fab fa-apple"></i>
+                  <i aria-hidden="true" class="fab fa-apple"></i>
                 </div>
                 <div class="card-content">
                   <div class="content">
@@ -402,24 +408,47 @@
           </div>
         </div>
         <div class="tabs is-boxed is-centered main-menu" id="nav">
-          <ul>
-            <li data-target="pane-1" id="1" class="is-active">
-              <a href="#" class="outlined-link">
-                <span class="icon is-small"><i class="fa fa-image"></i></span>
+          <ul role="tablist">
+            <li
+              role="tab"
+              data-target="pane-1"
+              id="1"
+              class="is-active"
+              tabindex="0"
+              aria-controls="pane-1"
+            >
+              <a class="outlined-link">
+                <span class="icon is-small"
+                  ><i aria-hidden="true" class="fa fa-image"></i
+                ></span>
                 <span>Pictures</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3">
-              <a href="#" class="outlined-link">
+            <li
+              role="tab"
+              data-target="pane-3"
+              id="3"
+              tabindex="0"
+              aria-controls="pane-3"
+            >
+              <a class="outlined-link">
                 <span class="icon is-small"
-                  ><i class="fab fa-superpowers"></i
+                  ><i aria-hidden="true" class="fab fa-superpowers"></i
                 ></span>
                 <span>Team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4">
-              <a href="#" class="outlined-link">
-                <span class="icon is-small"><i class="fa fa-film"></i></span>
+            <li
+              role="tab"
+              data-target="pane-4"
+              id="4"
+              tabindex="0"
+              aria-controls="pane-4"
+            >
+              <a class="outlined-link">
+                <span class="icon is-small"
+                  ><i aria-hidden="true" class="fa fa-film"></i
+                ></span>
                 <span>Video</span>
               </a>
             </li>
@@ -428,7 +457,7 @@
       </section>
 
       <section class="tab-content container">
-        <div class="tab-pane is-active level" id="pane-1">
+        <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
           <div class="container">
             <div class="columns features">
               <div class="column is-4">
@@ -456,6 +485,8 @@
                         class="button is-link modal-button"
                         data-target="modal-image1"
                         type="button"
+                        aria-controls="modal-image1"
+                        aria-haspopup="dialog"
                       >
                         Image modal
                       </button>
@@ -484,6 +515,8 @@
                         class="button is-link modal-button"
                         data-target="modal-card"
                         type="button"
+                        aria-controls="modal-card"
+                        aria-haspopup="dialog"
                       >
                         Modal Card
                       </button>
@@ -516,6 +549,8 @@
                         class="button is-link modal-button"
                         data-target="modal-image2"
                         type="button"
+                        aria-controls="modal-image2"
+                        aria-haspopup="dialog"
                       >
                         Image modal
                       </button>
@@ -527,12 +562,12 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div class="tab-pane" id="pane-3" role="tabpanel">
           <div class="columns medias">
             <div class="column">
               <div class="media">
                 <div class="media-left">
-                  <i class="fab fa-github-square fa-4x"></i>
+                  <i aria-hidden="true" class="fab fa-github-square fa-4x"></i>
                 </div>
                 <div class="media-content">
                   <div class="content">
@@ -548,7 +583,7 @@
               </div>
               <div class="media">
                 <div class="media-left">
-                  <i class="fab fa-empire fa-4x"></i>
+                  <i aria-hidden="true" class="fab fa-empire fa-4x"></i>
                 </div>
                 <div class="media-content">
                   <div class="content">
@@ -566,7 +601,7 @@
             <div class="column">
               <div class="media">
                 <div class="media-left">
-                  <i class="fab fa-ravelry fa-4x"></i>
+                  <i aria-hidden="true" class="fab fa-ravelry fa-4x"></i>
                 </div>
                 <div class="media-content">
                   <div class="content">
@@ -582,7 +617,7 @@
               </div>
               <div class="media">
                 <div class="media-left">
-                  <i class="fab fa-github-alt fa-4x"></i>
+                  <i aria-hidden="true" class="fab fa-github-alt fa-4x"></i>
                 </div>
                 <div class="media-content">
                   <div class="content">
@@ -600,7 +635,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div class="tab-pane" id="pane-4" role="tabpanel">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <div class="title has-text-centered">Inspired video</div>
@@ -635,7 +670,7 @@
                     alt="web access summit"
                   />
                 </div>
-                <p class="title">New York</p>
+                <h3 class="title">New York</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -645,7 +680,7 @@
                 <div class="image">
                   <img src="./img/access.jpg" alt="person in a wheelchair" />
                 </div>
-                <p class="title">Los Angeles</p>
+                <h3 class="title">Los Angeles</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -655,7 +690,7 @@
                 <div class="image">
                   <img src="./img/dotcss-2019.jpg" alt="conference hall" />
                 </div>
-                <p class="title">Mexico</p>
+                <h3 class="title">Mexico</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -668,7 +703,7 @@
                 <div class="image">
                   <img src="./img/images.jpg" alt="access something" />
                 </div>
-                <p class="title">Paris</p>
+                <h3 class="title">Paris</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -681,7 +716,7 @@
                     alt="css minsk logo"
                   />
                 </div>
-                <p class="title">Minsk</p>
+                <h3 class="title">Minsk</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -691,7 +726,7 @@
                 <div class="image">
                   <img src="./img/access.jpg" alt="" />
                 </div>
-                <p class="title">London</p>
+                <h3 class="title">London</h3>
                 <p class="subtitle">Fri 27 Nov 2016</p>
                 <button class="button" type="button">Buy Tickets</button>
               </div>
@@ -710,18 +745,22 @@
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Front End Web Development</div>
-                  Develop Front End using latest standards with HTML5/CSS3 with
-                  added funtionality using JavaScript and Vue.js.
+                  <h3 class="title is-5">Front End Web Development</h3>
+                  <p>
+                    Develop Front End using latest standards with HTML5/CSS3
+                    with added funtionality using JavaScript and Vue.js.
+                  </p>
                 </div>
               </a>
             </div>
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Back End Web Development</div>
-                  Develop Back End application/service using Node.js or ASP .NET
-                  and SQL server or Mongo DB databases.
+                  <h3 class="title is-5">Back End Web Development</h3>
+                  <p>
+                    Develop Back End application/service using Node.js or ASP
+                    .NET and SQL server or Mongo DB databases.
+                  </p>
                 </div>
               </a>
             </div>
@@ -731,18 +770,22 @@
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Front End Web Development</div>
-                  Develop Front End using latest standards with HTML5/CSS3 with
-                  added funtionality using JavaScript and Vue.js.
+                  <h3 class="title is-5">Front End Web Development</h3>
+                  <p>
+                    Develop Front End using latest standards with HTML5/CSS3
+                    with added funtionality using JavaScript and Vue.js.
+                  </p>
                 </div>
               </a>
             </div>
             <div class="column">
               <a class="box" href="#">
                 <div class="content">
-                  <div class="title is-5">Back End Web Development</div>
-                  Develop Back End application/service using Node.js or ASP .NET
-                  and SQL server or Mongo DB databases.
+                  <h3 class="title is-5">Back End Web Development</h3>
+                  <p>
+                    Develop Back End application/service using Node.js or ASP
+                    .NET and SQL server or Mongo DB databases.
+                  </p>
                 </div>
               </a>
             </div>
@@ -760,8 +803,8 @@
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Admin <small>(Light)</small></span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -770,23 +813,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-danger">WIP</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-1.jpeg" alt="js conf logo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a class="card-footer-item" href="#">Preview</a>
                     <a class="card-footer-item" href="#">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Cards</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -795,23 +838,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">?</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-2.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Forum</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -820,25 +863,25 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-3.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>InstaAlbum</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -847,23 +890,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-4.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Landing</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -872,23 +915,23 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-5.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <div class="card-header">
-                    <p class="card-header-title">
+                  <header class="card-header">
+                    <h3 class="card-header-title">
                       <span>Marketing</span>
                       <span class="is-pulled-right">
                         <a href="#" class="outlined-link">
@@ -897,17 +940,17 @@
                         <span class="tag is-default">Desktop</span>
                         <span class="tag is-default">Mobile</span>
                       </span>
-                    </p>
-                  </div>
+                    </h3>
+                  </header>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-6.jpeg" alt="event photo" />
                     </div>
                   </div>
-                  <div class="card-footer">
+                  <footer class="card-footer">
                     <a href="#" class="card-footer-item">Preview</a>
                     <a href="#" class="card-footer-item">Source Code</a>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
@@ -933,22 +976,44 @@
                 New Post
               </button>
               <div class="menu">
-                <ul class="menu-list forum-list">
-                  <li>
-                    <span class="tag is-primary is-medium">Dashboard</span>
+                <ul class="menu-list forum-list" role="menu">
+                  <li role="menuitem">
+                    <button class="tag is-primary is-medium outlined-button">
+                      Dashboard
+                    </button>
                   </li>
-                  <li><span class="tag is-link is-medium">Customers</span></li>
-                  <li>
-                    <span class="tag is-light is-danger is-medium"
-                      >Authentication</span
+                  <li role="menuitem">
+                    <button class="tag is-link is-medium outlined-button">
+                      Customers
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button
+                      class="tag is-light is-danger is-medium outlined-button"
                     >
+                      Authentication
+                    </button>
                   </li>
-                  <li><span class="tag is-dark is-medium">Payments</span></li>
-                  <li>
-                    <span class="tag is-success is-medium">Transfers</span>
+                  <li role="menuitem">
+                    <button class="tag is-dark is-medium outlined-button">
+                      Payments
+                    </button>
                   </li>
-                  <li><span class="tag is-warning is-medium">Balance</span></li>
-                  <li><span class="tag is-medium">Question</span></li>
+                  <li role="menuitem">
+                    <button class="tag is-success is-medium outlined-button">
+                      Transfers
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button class="tag is-warning is-medium outlined-button">
+                      Balance
+                    </button>
+                  </li>
+                  <li role="menuitem">
+                    <button class="tag is-medium outlined-button">
+                      Question
+                    </button>
+                  </li>
                 </ul>
               </div>
             </aside>
@@ -976,7 +1041,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 1</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        1</span
                       >
                     </div>
                   </div>
@@ -1004,7 +1070,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 0</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        0</span
                       >
                     </div>
                   </div>
@@ -1035,7 +1102,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 13</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        13</span
                       >
                     </div>
                   </div>
@@ -1063,7 +1131,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 2</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        2</span
                       >
                     </div>
                   </div>
@@ -1094,7 +1163,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 2</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        2</span
                       >
                     </div>
                   </div>
@@ -1122,7 +1192,8 @@
                     </div>
                     <div class="media-right">
                       <span class="has-text-grey-dark"
-                        ><i class="fa fa-comments"></i> 2</span
+                        ><i aria-hidden="true" class="fa fa-comments"></i>
+                        2</span
                       >
                     </div>
                   </div>
@@ -1145,6 +1216,7 @@
               <label for="name" class="label">Name</label>
               <div class="control">
                 <input
+                  aria-required="true"
                   class="input"
                   type="text"
                   placeholder="Text input"
@@ -1156,12 +1228,17 @@
             <div class="field">
               <label for="user-name" class="label">Username</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" type="text" id="user-name" />
+                <input
+                  aria-required="true"
+                  class="input is-success"
+                  type="text"
+                  id="user-name"
+                />
                 <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
+                  <i aria-hidden="true" class="fas fa-user"></i>
                 </span>
                 <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
+                  <i aria-hidden="true" class="fas fa-check"></i>
                 </span>
               </div>
               <p class="help is-success">This username is available</p>
@@ -1176,15 +1253,20 @@
                   type="email"
                   placeholder="Email input"
                   value="hello@"
+                  aria-invalid="true"
+                  aria-required="true"
+                  aria-describedby="email-description"
                 />
                 <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
+                  <i aria-hidden="true" class="fas fa-envelope"></i>
                 </span>
                 <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
+                  <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p class="help is-danger">This email is invalid</p>
+              <p id="email-description" class="help is-danger">
+                This email is invalid
+              </p>
             </div>
 
             <div class="field">
@@ -1206,6 +1288,7 @@
                   id="message"
                   class="textarea"
                   placeholder="Textarea"
+                  aria-required="true"
                 ></textarea>
               </div>
             </div>
@@ -1213,7 +1296,10 @@
             <div class="field">
               <div class="control">
                 <label class="checkbox">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    aria-label="I agree to the terms and condition"
+                  />
                   I agree to the
                   <a href="#" class="outlined-link">terms and conditions</a>
                 </label>
@@ -1222,13 +1308,13 @@
 
             <fieldset class="field">
               <legend class="visually-hidden">Subscribe to newsletter?</legend>
-              <div class="control">
+              <div class="control" role="radiogroup">
                 <label class="radio">
-                  <input type="radio" name="question" />
+                  <input type="radio" name="question" aria-label="Yes" />
                   Yes
                 </label>
                 <label class="radio">
-                  <input type="radio" name="question" />
+                  <input type="radio" name="question" aria-label="No" />
                   No
                 </label>
               </div>
@@ -1270,7 +1356,7 @@
               <div class="notification has-background-white media">
                 <div class="media-left">
                   <span class="icon has-text-info">
-                    <i class="fab fa-lg fa-wpforms"></i>
+                    <i aria-hidden="true" class="fab fa-lg fa-wpforms"></i>
                   </span>
                 </div>
                 <div class="media-content">
@@ -1288,7 +1374,7 @@
               <div class="notification has-background-white media">
                 <div class="media-left">
                   <span class="icon has-text-danger">
-                    <i class="fas fa-lg fa-cubes"></i>
+                    <i aria-hidden="true" class="fas fa-lg fa-cubes"></i>
                   </span>
                 </div>
                 <div class="media-content">
@@ -1305,7 +1391,7 @@
               <div class="notification has-background-white media">
                 <div class="media-left">
                   <span class="icon has-text-grey-dark">
-                    <i class="fas fa-lg fa-cogs"></i>
+                    <i aria-hidden="true" class="fas fa-lg fa-cogs"></i>
                   </span>
                 </div>
                 <div class="media-content">
@@ -1322,7 +1408,7 @@
               <div class="notification has-background-white media">
                 <div class="media-left">
                   <span class="icon has-text-primary">
-                    <i class="fas fa-lg fa-warehouse"></i>
+                    <i aria-hidden="true" class="fas fa-lg fa-warehouse"></i>
                   </span>
                 </div>
                 <div class="media-content">
@@ -1340,7 +1426,7 @@
               <div class="notification has-background-white media">
                 <div class="media-left">
                   <span class="icon has-text-danger">
-                    <i class="fas fa-lg fa-cube"></i>
+                    <i aria-hidden="true" class="fas fa-lg fa-cube"></i>
                   </span>
                 </div>
                 <div class="media-content">
@@ -1425,16 +1511,16 @@
         <div class="content has-text-centered">
           <h2 class="soc">
             <a href="#" class="outlined-link" title="Github"
-              ><i class="fab fa-github-alt fa-2x"></i
+              ><i aria-hidden="true" class="fab fa-github-alt fa-2x"></i
             ></a>
             <a href="#" class="outlined-link" title="Youtube"
-              ><i class="fab fa-youtube fa-2x"></i
+              ><i aria-hidden="true" class="fab fa-youtube fa-2x"></i
             ></a>
             <a href="#" class="outlined-link" title="Facebook"
-              ><i class="fab fa-facebook fa-2x"></i
+              ><i aria-hidden="true" class="fab fa-facebook fa-2x"></i
             ></a>
             <a href="#" class="outlined-link" title="Twitter"
-              ><i class="fab fa-twitter fa-2x"></i
+              ><i aria-hidden="true" class="fab fa-twitter fa-2x"></i
             ></a>
           </h2>
           <p>
@@ -1451,7 +1537,12 @@
       </div>
     </footer>
 
-    <div id="modal-card" class="modal modal-fx-3dSlit">
+    <div
+      role="dialog"
+      id="modal-card"
+      class="modal modal-fx-3dSlit"
+      aria-labelledby="modal-card-label"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
         <div class="card">
@@ -1473,7 +1564,7 @@
                   />
                 </div>
               </div>
-              <div class="media-content">
+              <div id="modal-card-label" class="media-content" tabindex="0">
                 <div class="title is-4">Jane Doe</div>
                 <div class="subtitle is-6">@jane_doe</div>
               </div>
@@ -1505,7 +1596,13 @@
       <button class="modal-close is-large" type="button"></button>
     </div>
 
-    <div id="modal-image1" class="modal modal-fx-3dSlit">
+    <div
+      role="dialog"
+      id="modal-image1"
+      class="modal modal-fx-3dSlit"
+      aria-labelledby="modal-image-label"
+      tabindex="0"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
         <img
@@ -1515,8 +1612,15 @@
       </div>
       <button class="modal-close is-large" type="button"></button>
     </div>
+    <p id="modal-image-label" class="visually-hidden">Preview image modal</p>
 
-    <div id="modal-image2" class="modal modal-fx-superScaled">
+    <div
+      role="dialog"
+      id="modal-image2"
+      class="modal modal-fx-superScaled"
+      aria-labelledby="modal-image-label"
+      tabindex="0"
+    >
       <div class="modal-background"></div>
       <div class="modal-content is-image">
         <img
@@ -1524,7 +1628,26 @@
           alt="random image"
         />
       </div>
-      <button class="modal-close is-large" type="button"></button>
+      <button
+        aria-hidden="true"
+        class="modal-close is-large"
+        type="button"
+      ></button>
+    </div>
+
+    <div
+      id="snackbar"
+      class="message snackbar"
+      role="alert"
+      aria-hidden="true"
+      aria-live="off"
+      hidden
+    >
+      <div class="message-header">
+        <p class="snackbar-title"></p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body"></div>
     </div>
 
     <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
