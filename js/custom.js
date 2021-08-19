@@ -11,16 +11,28 @@ const SNACKBAR_INTERVAL = 60 * 1000;
   initSnackbar();
 })();
 
-document.querySelectorAll("#nav li").forEach(function (navEl) {
+const tabs = document.querySelectorAll("#nav li");
+
+tabs.forEach(function (navEl, i) {
   const toggle = () => {
     toggleTab(navEl.id, navEl.dataset.target);
   };
   navEl.addEventListener("click", toggle);
   navEl.addEventListener("keydown", function (e) {
-    if (e.code === "Space") {
+    const isAction = ["Space", "Enter"].includes(e.code);
+    if (isAction) {
       e.preventDefault();
       toggle();
     }
+
+    const isNext = ["ArrowRight", "ArrowDown"].includes(e.code);
+    const isPrev = ["ArrowLeft", "ArrowUp"].includes(e.code);
+    if (!(isNext || isPrev)) return;
+    e.preventDefault();
+    const total = tabs.length;
+
+    const nextIndex = isNext ? (i + 1) % total : (i - 1 + total) % total;
+    tabs[nextIndex].focus();
   });
 });
 
@@ -28,7 +40,7 @@ function toggleTab(selectedNav, targetId) {
   var navEls = document.querySelectorAll("#nav li");
 
   navEls.forEach(function (navEl) {
-    if (navEl.id == selectedNav) {
+    if (navEl.id === selectedNav) {
       navEl.classList.add("is-active");
     } else {
       if (navEl.classList.contains("is-active")) {
@@ -40,7 +52,7 @@ function toggleTab(selectedNav, targetId) {
   var tabs = document.querySelectorAll(".tab-pane");
 
   tabs.forEach(function (tab) {
-    if (tab.id == targetId) {
+    if (tab.id === targetId) {
       tab.style.display = "block";
     } else {
       tab.style.display = "none";
