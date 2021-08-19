@@ -37,21 +37,23 @@ tabs.forEach(function (navEl, i) {
 });
 
 function toggleTab(selectedNav, targetId) {
-  var navEls = document.querySelectorAll("#nav li");
-
-  navEls.forEach(function (navEl) {
-    if (navEl.id === selectedNav) {
-      navEl.classList.add("is-active");
+  tabs.forEach((tab) => {
+    if (tab.id === selectedNav) {
+      tab.classList.add("is-active");
+      tab.tabIndex = 0;
+      tab.ariaSelected = true;
     } else {
-      if (navEl.classList.contains("is-active")) {
-        navEl.classList.remove("is-active");
+      if (tab.classList.contains("is-active")) {
+        tab.classList.remove("is-active");
+        tab.tabIndex = -1;
+        tab.ariaSelected = false;
       }
     }
   });
 
-  var tabs = document.querySelectorAll(".tab-pane");
+  const tabPanels = document.querySelectorAll(".tab-pane");
 
-  tabs.forEach(function (tab) {
+  tabPanels.forEach(function (tab) {
     if (tab.id === targetId) {
       tab.style.display = "block";
     } else {
