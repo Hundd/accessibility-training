@@ -19,20 +19,40 @@ tabs.forEach(function (navEl, i) {
   };
   navEl.addEventListener("click", toggle);
   navEl.addEventListener("keydown", function (e) {
-    const isAction = ["Space", "Enter"].includes(e.code);
-    if (isAction) {
-      e.preventDefault();
-      toggle();
-    }
-
-    const isNext = ["ArrowRight", "ArrowDown"].includes(e.code);
-    const isPrev = ["ArrowLeft", "ArrowUp"].includes(e.code);
-    if (!(isNext || isPrev)) return;
-    e.preventDefault();
     const total = tabs.length;
+    let nextIndex;
 
-    const nextIndex = isNext ? (i + 1) % total : (i - 1 + total) % total;
-    tabs[nextIndex].focus();
+    switch (e.code) {
+      case "Space":
+      case "Enter":
+        toggle();
+        break;
+
+      case "ArrowRight":
+      case "ArrowDown":
+        nextIndex = (i + 1) % total;
+        break;
+
+      case "ArrowLeft":
+      case "ArrowUp":
+        nextIndex = (i - 1 + total) % total;
+        break;
+
+      case "Home":
+        nextIndex = 0;
+        break;
+
+      case "End":
+        nextIndex = total - 1;
+        break;
+
+      default:
+        return;
+    }
+    e.preventDefault();
+    if (nextIndex !== undefined) {
+      tabs[nextIndex].focus();
+    }
   });
 });
 
