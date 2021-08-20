@@ -116,17 +116,67 @@ function getRandomComment() {
 const navbarDropdown = document.getElementById("navbar-dropdown");
 const administration = document.getElementById("administration");
 
-function toggleNavbarDropdown() {
-  const isVisible = navbarDropdown.style.display === "block";
-  navbarDropdown.style.display = isVisible ? "none" : "block";
-  administration.ariaExpanded = !isVisible;
+function openNavbarDropdown() {
+  navbarDropdown.style.display = "block";
+  administration.ariaExpanded = true;
   navbarDropdown.firstElementChild.focus();
 }
 
-administration.addEventListener("click", (e) => {
-  toggleNavbarDropdown();
+function closeNavbarDropdown() {
+  navbarDropdown.style.display = "none";
+  administration.ariaExpanded = false;
+}
+
+administration.addEventListener("click", () => {
+  const isVisible = navbarDropdown.style.display === "block";
+  if (isVisible) {
+    closeNavbarDropdown();
+  } else {
+    openNavbarDropdown();
+  }
 });
 
-document.body.addEventListener("keydown", (e) => {
-  console.log(e.code, e);
+const dropdownMenuItems = navbarDropdown.querySelectorAll(".navbar-item");
+dropdownMenuItems.forEach((item, i) => {
+  item.addEventListener("keydown", (e) => {
+    const total = dropdownMenuItems.length;
+    let nextIndex;
+
+    switch (e.code) {
+      case "Tab":
+        closeNavbarDropdown();
+        return;
+
+      case "Escape":
+        closeNavbarDropdown();
+        administration.focus();
+        return;
+
+      case "ArrowRight":
+      case "ArrowDown":
+        nextIndex = (i + 1) % total;
+        break;
+
+      case "ArrowLeft":
+      case "ArrowUp":
+        nextIndex = (i - 1 + total) % total;
+        break;
+
+      case "Home":
+        nextIndex = 0;
+        break;
+
+      case "End":
+        nextIndex = total - 1;
+        break;
+
+      default:
+        return;
+    }
+    e.stopPropagation();
+    e.preventDefault();
+    if (nextIndex !== undefined) {
+      dropdownMenuItems[nextIndex].focus();
+    }
+  });
 });
