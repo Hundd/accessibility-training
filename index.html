@@ -60,30 +60,44 @@
                     <span>Home</span>
                   </a>
                 </li>
-                <li class="navbar-item is-hoverable" role="none">
-                  <a
-                    class="button is-white is-outlined"
-                    href="#"
-                    aria-haspopup="menu"
+                <li
+                  class="navbar-item is-hoverable"
+                  role="none"
+                  id="administration"
+                >
+                  <button
+                    class="button is-white is-outlined administration"
+                    tabindex="0"
+                    aria-haspopup="true"
+                    aria-controls="navbar-dropdown"
+                    aria-expanded="false"
                   >
                     <span class="icon">
                       <i aria-hidden="true" class="fab fa-superpowers"></i>
                     </span>
                     <span>Administration</span>
                     <span class="icon">
-                      <i aria-hidden="true"  class="fas fa-arrow-down"></i>
+                      <i aria-hidden="true" class="fas fa-arrow-down"></i>
                     </span>
-                  </a>
-                  <ul role="menu" class="navbar-dropdown">
-                    <li class="navbar-item" role="menuitem">Administration</li>
-                    <li class="navbar-item" role="menuitem">Team Settings</li>
-                    <li class="navbar-item" role="menuitem">
+                  </button>
+                  <div role="menu" class="navbar-dropdown" id="navbar-dropdown">
+                    <a class="navbar-item" role="menuitem" tabindex="-1"
+                      >Administration</a
+                    >
+                    <a class="navbar-item" role="menuitem" tabindex="-1"
+                      >Team Settings</a
+                    >
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
                       Manage Your Team
-                    </li>
-                    <li class="navbar-item" role="menuitem">Invitations</li>
-                    <li class="navbar-divider" role="separator"></li>
-                    <li class="navbar-item" role="menuitem">Authentication</li>
-                  </ul>
+                    </a>
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Invitations
+                    </a>
+                    <hr class="navbar-divider" role="separator" />
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Authentication
+                    </a>
+                  </div>
                 </li>
                 <li class="navbar-item" role="none">
                   <a class="button is-white is-outlined" href="#">

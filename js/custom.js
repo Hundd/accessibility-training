@@ -112,3 +112,21 @@ function getRandomComment() {
     (res) => res.json()
   );
 }
+
+const navbarDropdown = document.getElementById("navbar-dropdown");
+const administration = document.getElementById("administration");
+
+function toggleNavbarDropdown() {
+  const isVisible = navbarDropdown.style.display === "block";
+  navbarDropdown.style.display = isVisible ? "none" : "block";
+  administration.ariaExpanded = !isVisible;
+  navbarDropdown.firstElementChild.focus();
+}
+
+administration.addEventListener("click", (e) => {
+  toggleNavbarDropdown();
+});
+
+document.body.addEventListener("keydown", (e) => {
+  console.log(e.code, e);
+});

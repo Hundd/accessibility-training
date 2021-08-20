@@ -129,3 +129,13 @@ fieldset.field {
 .navbar-burger {
   color: white;
 }
+
+.administration {
+}
+
+.navbar-menu .navbar-dropdown .navbar-item:hover,
+.navbar-menu .navbar-dropdown .navbar-item:active,
+.navbar-menu .navbar-dropdown .navbar-item:focus {
+  background: black;
+  color: white;
+}
