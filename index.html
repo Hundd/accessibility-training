@@ -155,9 +155,9 @@
     </header>
 
     <main id="main">
-      <section class="section" id="about">
+      <section class="section" id="about" aria-labelledby="about-section-title">
         <div class="section-heading has-text-centered">
-          <h1 class="title is-2">About Us</h1>
+          <h1 class="title is-2" id="about-section-title">About Us</h1>
           <p class="subtitle is-5">We of all trades, master of "some"</p>
           <div class="container">
             <p>
@@ -362,10 +362,15 @@
         </div>
       </section>
 
-      <section class="hero has-background-grey-light">
+      <section
+        class="hero has-background-grey-light"
+        aria-labelledby="features-section-title"
+      >
         <div class="container features">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Three key features</h2>
+            <h2 class="title is-2" id="features-section-title">
+              Three key features
+            </h2>
             <div class="subtitle is-5">We don't hide what we do</div>
           </div>
 
@@ -699,10 +704,15 @@
         </div>
       </section>
 
-      <section class="section has-background-grey-lighter">
+      <section
+        class="section has-background-grey-lighter"
+        aria-labelledby="events-section-title"
+      >
         <div class="container has-text-centered">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Upcoming events</h2>
+            <h2 class="title is-2" id="events-section-title">
+              Upcoming events
+            </h2>
             <div class="subtitle is-5">
               Outcoming dates for the best options
             </div>
@@ -782,9 +792,9 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-labelledby="services-section-title">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Services</h2>
+          <h2 class="title is-2" id="services-section-title">Services</h2>
           <div class="subtitle is-5">What can I do for you?</div>
         </div>
         <div class="container">
@@ -840,10 +850,15 @@
         </div>
       </section>
 
-      <section class="section has-background-grey-lighter">
+      <section
+        class="section has-background-grey-lighter"
+        aria-describedby="photos-section-title"
+      >
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Photos from past events</h2>
+            <h2 class="title is-2" id="photos-section-title">
+              Photos from past events
+            </h2>
           </div>
 
           <div class="container portfolio-container">
@@ -1005,10 +1020,10 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-describedby="forum-section-title">
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Forum</h2>
+            <h2 class="title is-2" id="forum-section-title">Forum</h2>
             <h3 class="subtitle is-5">
               Discuss any topic with no leaving this page
             </h3>
@@ -1251,10 +1266,13 @@
         </div>
       </section>
 
-      <section class="section has-background-light">
+      <section
+        class="section has-background-light"
+        aria-describedby="contact-section-title"
+      >
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Contact us</h2>
+            <h2 class="title is-2" id="contact-section-title">Contact us</h2>
             <div class="subtitle is-5">Don't hesitate, ask anything</div>
           </div>
 
@@ -1379,7 +1397,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-label="Web Elements">
         <div class="container">
           <div class="columns is-multiline">
             <div class="column is-one-third">
@@ -1589,6 +1607,7 @@
       id="modal-card"
       class="modal modal-fx-3dSlit"
       aria-labelledby="modal-card-label"
+      aria-modal="true"
     >
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
@@ -1649,6 +1668,7 @@
       class="modal modal-fx-3dSlit"
       aria-labelledby="modal-image-label"
       tabindex="0"
+      aria-modal="true"
     >
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
@@ -1667,6 +1687,7 @@
       class="modal modal-fx-superScaled"
       aria-labelledby="modal-image-label"
       tabindex="0"
+      aria-modal="true"
     >
       <div class="modal-background"></div>
       <div class="modal-content is-image">
