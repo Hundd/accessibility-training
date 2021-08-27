@@ -76,8 +76,10 @@ function toggleTab(selectedNav, targetId) {
   tabPanels.forEach(function (tab) {
     if (tab.id === targetId) {
       tab.style.display = "block";
+      tab.tabIndex = 0;
     } else {
       tab.style.display = "none";
+      tab.tabIndex = -1;
     }
   });
 }

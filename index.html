@@ -26,7 +26,7 @@
     </a>
     <header class="hero hero-bg is-fullheight">
       <div class="hero-head">
-        <nav class="navbar" aria-label="main navigation">
+        <nav class="navbar" aria-label="main menu">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item logo-link" href="#">
@@ -51,8 +51,8 @@
             </div>
 
             <div id="navbarMenu" class="navbar-menu">
-              <ul class="navbar-end" role="none">
-                <li class="navbar-item" role="none">
+              <ul class="navbar-end" role="menubar">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fa fa-home"></i>
@@ -60,7 +60,7 @@
                     <span>Home</span>
                   </a>
                 </li>
-                <li class="navbar-item is-hoverable" role="none">
+                <li class="navbar-item is-hoverable" role="menuitem">
                   <button
                     id="administration"
                     class="button is-white is-outlined administration"
@@ -96,7 +96,7 @@
                     </a>
                   </div>
                 </li>
-                <li class="navbar-item" role="none">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fab fa-superpowers"></i>
@@ -104,7 +104,7 @@
                     <span>Examples</span>
                   </a>
                 </li>
-                <li class="navbar-item" role="none">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fa fa-book"></i>
@@ -112,7 +112,7 @@
                     <span>Documentation</span>
                   </a>
                 </li>
-                <li class="navbar-item" role="none">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fab fa-github"></i>
@@ -439,8 +439,8 @@
         </div>
       </section>
 
-      <section aria-describedby="tabs-section-heading">
-        <header class="hero is-info">
+      <section aria-labelledby="tabs-section-heading">
+        <div class="hero is-info">
           <div class="hero-body">
             <div class="container">
               <h2 class="title" id="tabs-section-heading">List of topics</h2>
@@ -499,9 +499,14 @@
               </li>
             </ul>
           </div>
-        </header>
+        </div>
         <div class="tab-content container">
-          <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
+          <div
+            class="tab-pane is-active level"
+            id="pane-1"
+            role="tabpanel"
+            tabindex="0"
+          >
             <div class="container">
               <div class="columns features">
                 <div class="column is-4">
@@ -852,7 +857,7 @@
 
       <section
         class="section has-background-grey-lighter"
-        aria-describedby="photos-section-title"
+        aria-labelledby="photos-section-title"
       >
         <div class="container">
           <div class="section-heading has-text-centered">
@@ -865,7 +870,7 @@
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Admin <small>(Light)</small></span>
                       <span class="is-pulled-right">
@@ -876,7 +881,7 @@
                         <span class="tag is-danger">WIP</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-1.jpeg" alt="js conf logo" />
@@ -890,7 +895,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Cards</span>
                       <span class="is-pulled-right">
@@ -901,7 +906,7 @@
                         <span class="tag is-default">?</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-2.jpeg" alt="event photo" />
@@ -915,7 +920,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Forum</span>
                       <span class="is-pulled-right">
@@ -926,7 +931,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-3.jpeg" alt="event photo" />
@@ -942,7 +947,7 @@
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>InstaAlbum</span>
                       <span class="is-pulled-right">
@@ -953,7 +958,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-4.jpeg" alt="event photo" />
@@ -967,7 +972,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Landing</span>
                       <span class="is-pulled-right">
@@ -978,7 +983,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-5.jpeg" alt="event photo" />
@@ -992,7 +997,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Marketing</span>
                       <span class="is-pulled-right">
@@ -1003,7 +1008,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-6.jpeg" alt="event photo" />
@@ -1020,7 +1025,7 @@
         </div>
       </section>
 
-      <section class="section" aria-describedby="forum-section-title">
+      <section class="section" aria-labelledby="forum-section-title">
         <div class="container">
           <div class="section-heading has-text-centered">
             <h2 class="title is-2" id="forum-section-title">Forum</h2>
@@ -1268,7 +1273,7 @@
 
       <section
         class="section has-background-light"
-        aria-describedby="contact-section-title"
+        aria-labelledby="contact-section-title"
       >
         <div class="container">
           <div class="section-heading has-text-centered">
@@ -1320,7 +1325,7 @@
                   value="hello@"
                   aria-invalid="true"
                   aria-required="true"
-                  aria-describedby="email-description"
+                  aria-labelledby="email-description"
                 />
                 <span class="icon is-small is-left">
                   <i aria-hidden="true" class="fas fa-envelope"></i>
