@@ -26,7 +26,7 @@
     </a>
     <header class="hero hero-bg is-fullheight">
       <div class="hero-head">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" aria-label="main menu">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item logo-link" href="#">
@@ -51,8 +51,8 @@
             </div>
 
             <div id="navbarMenu" class="navbar-menu">
-              <ul class="navbar-end">
-                <li class="navbar-item">
+              <ul class="navbar-end" role="menubar">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fa fa-home"></i>
@@ -60,7 +60,43 @@
                     <span>Home</span>
                   </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar-item is-hoverable" role="menuitem">
+                  <button
+                    id="administration"
+                    class="button is-white is-outlined administration"
+                    tabindex="0"
+                    aria-haspopup="true"
+                    aria-controls="navbar-dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="icon">
+                      <i aria-hidden="true" class="fab fa-superpowers"></i>
+                    </span>
+                    <span>Administration</span>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fas fa-arrow-down"></i>
+                    </span>
+                  </button>
+                  <div role="menu" class="navbar-dropdown" id="navbar-dropdown">
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Administration
+                    </a>
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Team Settings
+                    </a>
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Manage Your Team
+                    </a>
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Invitations
+                    </a>
+                    <hr class="navbar-divider" role="separator" />
+                    <a class="navbar-item" role="menuitem" tabindex="-1">
+                      Authentication
+                    </a>
+                  </div>
+                </li>
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fab fa-superpowers"></i>
@@ -68,7 +104,7 @@
                     <span>Examples</span>
                   </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fa fa-book"></i>
@@ -76,7 +112,7 @@
                     <span>Documentation</span>
                   </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar-item" role="menuitem">
                   <a class="button is-white is-outlined" href="#">
                     <span class="icon">
                       <i aria-hidden="true" class="fab fa-github"></i>
@@ -118,10 +154,10 @@
       </div>
     </header>
 
-    <main id="main" role="main">
-      <section class="section" id="about">
+    <main id="main">
+      <section class="section" id="about" aria-labelledby="about-section-title">
         <div class="section-heading has-text-centered">
-          <h1 class="title is-2">About Us</h1>
+          <h1 class="title is-2" id="about-section-title">About Us</h1>
           <p class="subtitle is-5">We of all trades, master of "some"</p>
           <div class="container">
             <p>
@@ -326,10 +362,15 @@
         </div>
       </section>
 
-      <section class="hero has-background-grey-light">
+      <section
+        class="hero has-background-grey-light"
+        aria-labelledby="features-section-title"
+      >
         <div class="container features">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Three key features</h2>
+            <h2 class="title is-2" id="features-section-title">
+              Three key features
+            </h2>
             <div class="subtitle is-5">We don't hide what we do</div>
           </div>
 
@@ -398,264 +439,285 @@
         </div>
       </section>
 
-      <section class="hero is-info">
-        <div class="hero-body">
-          <div class="container">
-            <div class="title">List of topics</div>
-            <div class="subtitle">
-              We are always in touch we the outside world
+      <section aria-labelledby="tabs-section-heading">
+        <div class="hero is-info">
+          <div class="hero-body">
+            <div class="container">
+              <h2 class="title" id="tabs-section-heading">List of topics</h2>
+              <p class="subtitle">
+                We are always in touch we the outside world
+              </p>
             </div>
           </div>
+          <div class="tabs is-boxed is-centered main-menu" id="nav">
+            <ul role="tablist">
+              <li
+                role="tab"
+                data-target="pane-1"
+                id="1"
+                class="is-active"
+                tabindex="0"
+                aria-controls="pane-1"
+                aria-selected="true"
+              >
+                <a class="outlined-link">
+                  <span class="icon is-small"
+                    ><i aria-hidden="true" class="fa fa-image"></i
+                  ></span>
+                  <span>Pictures</span>
+                </a>
+              </li>
+              <li
+                role="tab"
+                data-target="pane-3"
+                id="3"
+                tabindex="-1"
+                aria-controls="pane-3"
+                aria-selected="false"
+              >
+                <a class="outlined-link">
+                  <span class="icon is-small"
+                    ><i aria-hidden="true" class="fab fa-superpowers"></i
+                  ></span>
+                  <span>Team</span>
+                </a>
+              </li>
+              <li
+                role="tab"
+                data-target="pane-4"
+                id="4"
+                tabindex="-1"
+                aria-controls="pane-4"
+                aria-selected="false"
+              >
+                <a class="outlined-link">
+                  <span class="icon is-small"
+                    ><i aria-hidden="true" class="fa fa-film"></i
+                  ></span>
+                  <span>Video</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="tabs is-boxed is-centered main-menu" id="nav">
-          <ul role="tablist">
-            <li
-              role="tab"
-              data-target="pane-1"
-              id="1"
-              class="is-active"
-              tabindex="0"
-              aria-controls="pane-1"
-            >
-              <a class="outlined-link">
-                <span class="icon is-small"
-                  ><i aria-hidden="true" class="fa fa-image"></i
-                ></span>
-                <span>Pictures</span>
-              </a>
-            </li>
-            <li
-              role="tab"
-              data-target="pane-3"
-              id="3"
-              tabindex="0"
-              aria-controls="pane-3"
-            >
-              <a class="outlined-link">
-                <span class="icon is-small"
-                  ><i aria-hidden="true" class="fab fa-superpowers"></i
-                ></span>
-                <span>Team</span>
-              </a>
-            </li>
-            <li
-              role="tab"
-              data-target="pane-4"
-              id="4"
-              tabindex="0"
-              aria-controls="pane-4"
-            >
-              <a class="outlined-link">
-                <span class="icon is-small"
-                  ><i aria-hidden="true" class="fa fa-film"></i
-                ></span>
-                <span>Video</span>
-              </a>
-            </li>
-          </ul>
+        <div class="tab-content container">
+          <div
+            class="tab-pane is-active level"
+            id="pane-1"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="container">
+              <div class="columns features">
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img
+                          src="./img/tab-1.jpg"
+                          class="modal-button"
+                          data-target="modal-image1"
+                          alt="gamepad"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Click on image above</div>
+                        <p>
+                          Purus semper eget duis at tellus at urna condimentum
+                          mattis. Non blandit massa enim nec. Integer enim neque
+                          volutpat ac tincidunt vitae semper quis. Accumsan
+                          tortor posuere ac ut consequat semper viverra nam.
+                        </p>
+                        <button
+                          class="button is-link modal-button"
+                          data-target="modal-image1"
+                          type="button"
+                          aria-controls="modal-image1"
+                          aria-haspopup="dialog"
+                        >
+                          Image modal
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img src="./img/tab-2.jpg" alt="ocean breath" />
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Tempor orci dapibus ultrices in.</div>
+                        <p>
+                          Ut venenatis tellus in metus vulputate. Amet
+                          consectetur adipiscing elit pellentesque. Sed arcu non
+                          odio euismod lacinia at quis risus. Faucibus turpis in
+                          eu mi bibendum neque egestas cmonsu songue. Phasellus
+                          vestibulum lorem sed risus.
+                        </p>
+                        <button
+                          class="button is-link modal-button"
+                          data-target="modal-card"
+                          type="button"
+                          aria-controls="modal-card"
+                          aria-haspopup="dialog"
+                        >
+                          Modal Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4 modal-button" data-target="modal-image">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img
+                          src="./img/tab-3.jpg"
+                          class="modal-button"
+                          data-target="modal-image2"
+                          alt="romantic couple"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Click anywhere on card</div>
+                        <p>
+                          Imperdiet dui accumsan sit amet nulla facilisi morbi.
+                          Fusce ut placerat orci nulla pellentesque dignissim
+                          enim. Libero id faucibus nisl tincidunt eget nullam.
+                          Commodo viverra maecenas accumsan lacus vel facilisis.
+                        </p>
+                        <button
+                          class="button is-link modal-button"
+                          data-target="modal-image2"
+                          type="button"
+                          aria-controls="modal-image2"
+                          aria-haspopup="dialog"
+                        >
+                          Image modal
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="pane-3" role="tabpanel">
+            <div class="columns medias">
+              <div class="column">
+                <div class="media">
+                  <div class="media-left">
+                    <i
+                      aria-hidden="true"
+                      class="fab fa-github-square fa-4x"
+                    ></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="#" class="outlined-link"
+                          ><b>Dominic Ipsum</b></a
+                        >
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean efficitur sit amet massa fringilla egestas.
+                        Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <i aria-hidden="true" class="fab fa-empire fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="#" class="outlined-link"
+                          ><b>Cassie Ipsum</b></a
+                        >
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean efficitur sit amet massa fringilla egestas.
+                        Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="media">
+                  <div class="media-left">
+                    <i aria-hidden="true" class="fab fa-ravelry fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="#" class="outlined-link"><b>Avery Ipsum</b></a>
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean efficitur sit amet massa fringilla egestas.
+                        Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <i aria-hidden="true" class="fab fa-github-alt fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="#" class="outlined-link"><b>io Ipsum</b></a>
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean efficitur sit amet massa fringilla egestas.
+                        Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="pane-4" role="tabpanel">
+            <div class="columns is-centered">
+              <div class="column is-three-quarters">
+                <div class="title has-text-centered">Inspired video</div>
+                <div class="embed-container image">
+                  <iframe
+                    src="https://player.vimeo.com/video/261794608"
+                    webkitAllowFullScreen
+                    mozallowfullscreen
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="tab-content container">
-        <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
-          <div class="container">
-            <div class="columns features">
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <div class="image is-4by3">
-                      <img
-                        src="./img/tab-1.jpg"
-                        class="modal-button"
-                        data-target="modal-image1"
-                        alt="gamepad"
-                      />
-                    </div>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <div>Click on image above</div>
-                      <p>
-                        Purus semper eget duis at tellus at urna condimentum
-                        mattis. Non blandit massa enim nec. Integer enim neque
-                        volutpat ac tincidunt vitae semper quis. Accumsan tortor
-                        posuere ac ut consequat semper viverra nam.
-                      </p>
-                      <button
-                        class="button is-link modal-button"
-                        data-target="modal-image1"
-                        type="button"
-                        aria-controls="modal-image1"
-                        aria-haspopup="dialog"
-                      >
-                        Image modal
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <div class="image is-4by3">
-                      <img src="./img/tab-2.jpg" alt="ocean breath" />
-                    </div>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <div>Tempor orci dapibus ultrices in.</div>
-                      <p>
-                        Ut venenatis tellus in metus vulputate. Amet consectetur
-                        adipiscing elit pellentesque. Sed arcu non odio euismod
-                        lacinia at quis risus. Faucibus turpis in eu mi bibendum
-                        neque egestas cmonsu songue. Phasellus vestibulum lorem
-                        sed risus.
-                      </p>
-                      <button
-                        class="button is-link modal-button"
-                        data-target="modal-card"
-                        type="button"
-                        aria-controls="modal-card"
-                        aria-haspopup="dialog"
-                      >
-                        Modal Card
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4 modal-button" data-target="modal-image">
-                <div class="card">
-                  <div class="card-image">
-                    <div class="image is-4by3">
-                      <img
-                        src="./img/tab-3.jpg"
-                        class="modal-button"
-                        data-target="modal-image2"
-                        alt="romantic couple"
-                      />
-                    </div>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <div>Click anywhere on card</div>
-                      <p>
-                        Imperdiet dui accumsan sit amet nulla facilisi morbi.
-                        Fusce ut placerat orci nulla pellentesque dignissim
-                        enim. Libero id faucibus nisl tincidunt eget nullam.
-                        Commodo viverra maecenas accumsan lacus vel facilisis.
-                      </p>
-                      <button
-                        class="button is-link modal-button"
-                        data-target="modal-image2"
-                        type="button"
-                        aria-controls="modal-image2"
-                        aria-haspopup="dialog"
-                      >
-                        Image modal
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane" id="pane-3" role="tabpanel">
-          <div class="columns medias">
-            <div class="column">
-              <div class="media">
-                <div class="media-left">
-                  <i aria-hidden="true" class="fab fa-github-square fa-4x"></i>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a href="#" class="outlined-link"><b>Dominic Ipsum</b></a>
-                      <br />
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aenean efficitur sit amet massa fringilla egestas. Nullam
-                      condimentum luctus turpis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <i aria-hidden="true" class="fab fa-empire fa-4x"></i>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a href="#" class="outlined-link"><b>Cassie Ipsum</b></a>
-                      <br />
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aenean efficitur sit amet massa fringilla egestas. Nullam
-                      condimentum luctus turpis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="media">
-                <div class="media-left">
-                  <i aria-hidden="true" class="fab fa-ravelry fa-4x"></i>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a href="#" class="outlined-link"><b>Avery Ipsum</b></a>
-                      <br />
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aenean efficitur sit amet massa fringilla egestas. Nullam
-                      condimentum luctus turpis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <i aria-hidden="true" class="fab fa-github-alt fa-4x"></i>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a href="#" class="outlined-link"><b>io Ipsum</b></a>
-                      <br />
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aenean efficitur sit amet massa fringilla egestas. Nullam
-                      condimentum luctus turpis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane" id="pane-4" role="tabpanel">
-          <div class="columns is-centered">
-            <div class="column is-three-quarters">
-              <div class="title has-text-centered">Inspired video</div>
-              <div class="embed-container image">
-                <iframe
-                  src="https://player.vimeo.com/video/261794608"
-                  webkitAllowFullScreen
-                  mozallowfullscreen
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section has-background-grey-lighter">
+      <section
+        class="section has-background-grey-lighter"
+        aria-labelledby="events-section-title"
+      >
         <div class="container has-text-centered">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Upcoming events</h2>
+            <h2 class="title is-2" id="events-section-title">
+              Upcoming events
+            </h2>
             <div class="subtitle is-5">
               Outcoming dates for the best options
             </div>
@@ -735,9 +797,9 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-labelledby="services-section-title">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Services</h2>
+          <h2 class="title is-2" id="services-section-title">Services</h2>
           <div class="subtitle is-5">What can I do for you?</div>
         </div>
         <div class="container">
@@ -793,17 +855,22 @@
         </div>
       </section>
 
-      <section class="section has-background-grey-lighter">
+      <section
+        class="section has-background-grey-lighter"
+        aria-labelledby="photos-section-title"
+      >
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Photos from past events</h2>
+            <h2 class="title is-2" id="photos-section-title">
+              Photos from past events
+            </h2>
           </div>
 
           <div class="container portfolio-container">
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Admin <small>(Light)</small></span>
                       <span class="is-pulled-right">
@@ -814,7 +881,7 @@
                         <span class="tag is-danger">WIP</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-1.jpeg" alt="js conf logo" />
@@ -828,7 +895,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Cards</span>
                       <span class="is-pulled-right">
@@ -839,7 +906,7 @@
                         <span class="tag is-default">?</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-2.jpeg" alt="event photo" />
@@ -853,7 +920,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Forum</span>
                       <span class="is-pulled-right">
@@ -864,7 +931,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-3.jpeg" alt="event photo" />
@@ -880,7 +947,7 @@
             <div class="columns">
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>InstaAlbum</span>
                       <span class="is-pulled-right">
@@ -891,7 +958,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-4.jpeg" alt="event photo" />
@@ -905,7 +972,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Landing</span>
                       <span class="is-pulled-right">
@@ -916,7 +983,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-5.jpeg" alt="event photo" />
@@ -930,7 +997,7 @@
               </div>
               <div class="column is-4">
                 <div class="card">
-                  <header class="card-header">
+                  <div class="card-header">
                     <h3 class="card-header-title">
                       <span>Marketing</span>
                       <span class="is-pulled-right">
@@ -941,7 +1008,7 @@
                         <span class="tag is-default">Mobile</span>
                       </span>
                     </h3>
-                  </header>
+                  </div>
                   <div class="card-content">
                     <div class="image">
                       <img src="./img/ev-6.jpeg" alt="event photo" />
@@ -958,10 +1025,10 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-labelledby="forum-section-title">
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Forum</h2>
+            <h2 class="title is-2" id="forum-section-title">Forum</h2>
             <h3 class="subtitle is-5">
               Discuss any topic with no leaving this page
             </h3>
@@ -1204,10 +1271,13 @@
         </div>
       </section>
 
-      <section class="section has-background-light">
+      <section
+        class="section has-background-light"
+        aria-labelledby="contact-section-title"
+      >
         <div class="container">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Contact us</h2>
+            <h2 class="title is-2" id="contact-section-title">Contact us</h2>
             <div class="subtitle is-5">Don't hesitate, ask anything</div>
           </div>
 
@@ -1255,7 +1325,7 @@
                   value="hello@"
                   aria-invalid="true"
                   aria-required="true"
-                  aria-describedby="email-description"
+                  aria-labelledby="email-description"
                 />
                 <span class="icon is-small is-left">
                   <i aria-hidden="true" class="fas fa-envelope"></i>
@@ -1332,7 +1402,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-label="Web Elements">
         <div class="container">
           <div class="columns is-multiline">
             <div class="column is-one-third">
@@ -1542,6 +1612,7 @@
       id="modal-card"
       class="modal modal-fx-3dSlit"
       aria-labelledby="modal-card-label"
+      aria-modal="true"
     >
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
@@ -1602,7 +1673,9 @@
       class="modal modal-fx-3dSlit"
       aria-labelledby="modal-image-label"
       tabindex="0"
+      aria-modal="true"
     >
+      <p id="modal-image-label" class="visually-hidden">Preview image modal</p>
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
         <img
@@ -1612,7 +1685,6 @@
       </div>
       <button class="modal-close is-large" type="button"></button>
     </div>
-    <p id="modal-image-label" class="visually-hidden">Preview image modal</p>
 
     <div
       role="dialog"
@@ -1620,6 +1692,7 @@
       class="modal modal-fx-superScaled"
       aria-labelledby="modal-image-label"
       tabindex="0"
+      aria-modal="true"
     >
       <div class="modal-background"></div>
       <div class="modal-content is-image">
